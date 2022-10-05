@@ -8,7 +8,7 @@ with demographics as (
         p_gender as gender,
         p_zip_code as zip_code
 
-    from provider_data_raw.customer_data_raw.provider_customers
+    from {{ source('provider_raw_data', 'provider_customers')}}
 
 )
 

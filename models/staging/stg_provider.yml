@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns: 
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_customer_lifetime
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_demographics
+    columns:
+      - name: customer_id
+        tests: 
+          - unique
+          - not_null
+
+  - name: stg_subscriptions
+    columns:
+      - name: customer_id
+        tests: 
+          - unique
+          - not_null
+      - name: subscription_tier
+        tests:
+          - accepted_values:
+              values:
+                - 1-Year
+                - 30-Day Free Trial
+                - 60-Day Free Trial
+                - 1-Month
