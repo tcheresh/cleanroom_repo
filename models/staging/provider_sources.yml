@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: provider_raw_data
+    database: provider_data_raw
+    schema: customer_data_raw
+    tables:
+      - name: provider_customers
