@@ -1,4 +1,4 @@
-{{ config(materialized = 'table', schema = 'source_schema') }}
+{{ config(materialized = 'table', schema = 'prod') }}
 
 with customers as (
     select * from {{ ref('stg_customers') }}

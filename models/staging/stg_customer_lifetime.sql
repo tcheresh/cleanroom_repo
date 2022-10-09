@@ -7,7 +7,7 @@ with customer_lifetime as (
         p_last_name as last_name,
         datediff(month,p_subscription_date,current_date()) as Total_Months 
 
-    from {{ source('provider_raw_data', 'provider_customers')}}
+    from {{ source('consumer_raw_data', 'customers_raw')}}
     where Total_Months > 0
 )
 

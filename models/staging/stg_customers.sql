@@ -6,7 +6,7 @@ with customers as (
         p_last_name as last_name,
         p_email_address as email
 
-    from {{ source('provider_raw_data', 'provider_customers')}}
+    from {{ source('consumer_raw_data', 'customers_raw')}}
 
 )
 

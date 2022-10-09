@@ -1,8 +1,14 @@
 version: 2
 
 sources:
-  - name: provider_raw_data
-    database: provider_data_raw
+  - name: consumer_raw_data
+    database: consumer_data_raw
     schema: customer_data_raw
     tables:
-      - name: provider_customers
+      - name: customers_raw
+
+  - name: post_dcr
+    database: party2_dcr_db
+    schema: internal_schema
+    tables:
+      - name: customer_details
