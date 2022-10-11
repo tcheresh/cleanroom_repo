@@ -12,9 +12,9 @@ sources:
     schema: internal_schema
     tables:
       - name: customer_details
-  
-  - name: ad_servers
+
+  - name: ad_servers_json
     database: consumer_data_raw
-    schema: dbt_consumer
-    tables:
-      - name: ad_server_data
+    schema: CUSTOMER_DATA_RAW
+    tables: 
+      - name: ad_server_data_json

@@ -4,7 +4,7 @@ with stg_combined_data as (
 
     select *
 
-    from {{ source('post_dcr', 'customer_details')}}
+    from {{ ref('stg_combined_dataset')}}
 ) 
 
 select * from stg_combined_data
